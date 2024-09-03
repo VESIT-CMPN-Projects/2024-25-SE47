@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+:root{
+    --primary-font: "Bebas Neue", sans-serif;
+    --secondary-font: "DM Sans", sans-serif;
+    --primary-color: #093B85;
+    --secondary-color: #173B7A;
+    --gray-font: #3E3C3C;
+}
+
+#app-div{
+    margin-top: 12vh;
+}

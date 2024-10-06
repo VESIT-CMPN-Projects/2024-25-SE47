@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import styles from "./Navbar.module.css"
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import styles from "./Navbar.module.css";
+import NavbarLinks from "../NavbarLinks/NavbarLinks";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [active, SetActive] = useState(false)
   return (
-    <nav>
+    <>
+      <nav id={styles.normalnav}>
         <div id={styles.logo}>
           <img src={logo} alt={"Arasco logo"} />
           <div>
@@ -14,27 +18,28 @@ const Navbar = () => {
             <span>Pvt. Ltd.</span>
           </div>
         </div>
-        <ul>
-          <Link to={"/"}>
-            <li>Home</li>
-          </Link>
-          <Link to={"/about"}>
-            <li>About</li>
-          </Link>
-          <Link to={"/products"}>
-            <li>Products <MdOutlineKeyboardArrowDown className={styles.icon}/></li>
-          </Link>
-          <Link to={"/certificates"}>
-            <li>Certificates</li>
-          </Link>
-          <Link to={"/testimonials"}>
-            <li>Our Customers</li>
-          </Link>
-          <Link to={"/contacts"}>
-            <button>Contact Us</button>
-          </Link>
-        </ul>
-    </nav>
+        <NavbarLinks burger={false} setActive={SetActive} active={active}/>
+      </nav>
+      <nav id={styles.burgerMenu}>
+        <div id={styles.logo}>
+          <img src={logo} alt={"Arasco logo"} />
+          <div>
+            <span>Arasco</span>
+            <span>Export India</span>
+            <span>Pvt. Ltd.</span>
+          </div>
+        </div>
+        <div className={styles.navicons}>
+        <GiHamburgerMenu onClick={()=>SetActive(!active)}/>
+        </div>
+        <div  className={`${styles.linkContainer} ${active ? styles.linkContainerActive : ''}`}>
+          <NavbarLinks burger={true} setActive={SetActive} active={active}/>
+          <div className={styles.navicons} id={styles.cross}>
+          <IoCloseSharp onClick={()=>SetActive(!active)}/>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 

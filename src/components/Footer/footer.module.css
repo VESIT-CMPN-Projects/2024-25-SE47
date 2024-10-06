@@ -1,41 +1,46 @@
-footer{
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
+footer {
     width: 100vw;
     background-color: var(--gray-font);
     color: white;
     padding: 2rem 4rem 6rem;
     font-family: var(--secondary-font);
     font-weight: 200;
+    max-width: 1500px;
+    margin: auto;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
 }
 
-.head{
-    margin-bottom: 20px;
+.head {
+    margin: 20px 0;
 }
 
-footer li{
+footer li {
     color: white;
     list-style: none;
     text-decoration: underline;
 }
 
-footer .contact{
+footer .contact, footer .icon {
     position: relative;
 }
 
-footer .icon{
-    position: absolute;
-}
-
-footer span{
+footer span {
     display: inline-block;
     width: 200px;
-    margin-left: 20px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 20px;
+}
+
+@media (min-width: 661px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .head {
+        margin: 0 0 20px;
+    }
 }

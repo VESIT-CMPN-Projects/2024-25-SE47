@@ -6,9 +6,11 @@
     box-sizing: border-box;
 }
 
-body{
+body, html{
     width: 100vw;
     overflow-x: hidden;
+    max-width: 1500px;
+    margin: auto;
 }
 
 :root{
@@ -17,8 +19,6 @@ body{
     --primary-color: #093B85;
     --secondary-color: #173B7A;
     --gray-font: #3E3C3C;
-}
-
-#app-div{
-    margin-top: 12vh;
+    --light-blue: #DCE8F4;
+    --too-light-blue: #F6F9FB;
 }

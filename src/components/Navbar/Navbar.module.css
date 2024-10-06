@@ -1,12 +1,15 @@
 nav{
     display: flex;
     justify-content: space-between;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 12px 0px, rgba(0, 0, 0, 0.3) 0px 0px 7px 0px;
-    position: fixed;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.24);
+    position: sticky;
     top: 0;
     z-index: 1;
     width: 100vw;
     height: 12vh;
+    background-color:white;
+    max-width: 1500px;
+    margin: auto;
 }
 
 nav ul{
@@ -55,3 +58,61 @@ nav ul button{
     font-size: larger;
 }
 
+#burgerMenu{
+    display: none;
+}
+
+.linkContainer{
+    position: absolute;
+    width: 100vw;
+    background-color: white;
+    z-index: 3;
+    top: -100vh;
+    transition: all 0.5s;
+}
+
+.linkContainerActive{
+    top: 0;
+}
+
+.linkContainer ul{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.linkContainer ul a, #cross{
+    width: 100vw;
+    padding: 10px;
+}
+
+.linkContainer ul a:hover, #cross:hover{
+    background-color: var(--too-light-blue);
+}
+
+#cross{ margin: 0;}
+
+.navicons{
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin: 20px;
+    font-size: 25px;
+}
+
+@media (max-width: 840px) {
+    #normalnav{
+        display: none;
+    }
+
+    #burgerMenu{
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul{
+        justify-content: center;
+    }
+}

@@ -1,1 +1,32 @@
 /* Products Styles */
+#firstImage{
+    height: 50vh;
+    background: url(../../assets/landingbg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#searchdiv{
+    position: relative;
+    margin: 20px;
+}
+
+#searchdiv input{
+    background-color: var(--light-blue);
+    border-radius: 30px;
+    display: block;
+    width: 40vw;
+    margin: auto;
+    padding: 15px 3px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#searchicon{
+    position: absolute;
+    top: 13px;
+    right: 10rem;
+    width: 40vw;
+}

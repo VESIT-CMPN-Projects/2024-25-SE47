@@ -1,7 +1,9 @@
+import Pageshead from "../../components/Pageshead/Pageshead"
+
 const Product = () => {
   return (
     <div>
-      Product
+      <Pageshead/>
     </div>
   )
 }

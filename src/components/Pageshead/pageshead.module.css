@@ -1,0 +1,17 @@
+#headcontainer{
+    padding: 3rem;
+    text-align: center;
+}
+
+h1{
+   color: var(--secondary-color);
+   font-size: 4rem;
+   font-family: var( --primary-font);
+}
+
+#underline{
+    height: 2px;
+    background-color: var(--secondary-color);
+    width: 10rem;
+    margin: auto;
+}

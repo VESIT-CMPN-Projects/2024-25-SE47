@@ -18,9 +18,20 @@ const NavbarLinks = ({burger, setActive, active}) => {
     <Link to={"/about"} onClick={onClickBurgerMenu}>
       <li>About</li>
     </Link>
+    <div>
+    <select name="productId" id="product">
+    <option value="">
     <Link to={"/products"} onClick={onClickBurgerMenu}>
       <li>Products <MdOutlineKeyboardArrowDown className={styles.icon}/></li>
     </Link>
+    </option>
+      <option value="Grain">Grain</option>
+      <option value="Spices">Spices</option>
+      <option value="Fruits">Fruits</option>
+      <option value="Lentils">Lentils</option>
+      <option value="Pulses">Pulses</option>
+    </select>
+    </div>
     <Link to={"/certificates"} onClick={onClickBurgerMenu}>
       <li>Certificates</li>
     </Link>

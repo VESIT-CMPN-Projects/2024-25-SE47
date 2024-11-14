@@ -7,8 +7,8 @@ import oil from "../assets/oil.png"
 const populaproducts = [
     {
         path: grains,
-        text: "Grains",
-        alt: "Rice and Grains"
+        text: "Rice",
+        alt: "Rice"
     },
     {
         path: spices,

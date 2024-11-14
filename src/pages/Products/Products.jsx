@@ -5,6 +5,7 @@ import Cards from "../../components/Cards/Cards";
 import {Box, InputAdornment, TextField } from "@mui/material";
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -18,7 +19,7 @@ const Products = () => {
     }
     setProducts(()=>{
     return popularproducts.filter((prod)=>
-        prod.text.includes(e.target.value)
+        prod.text.toLowerCase().includes(e.target.value.toLowerCase())
       )
     })
   }
@@ -68,9 +69,11 @@ const Products = () => {
     </Box>
 
         <div id={styles.product_Container}>
-        {products.map((prod, index) => (
-          <Cards key={index} path={prod.path} text={prod.text} alt={prod.alt}/>
-        ))}
+        {products.map((prod, index) => {
+           return <Link  key={index} to={`/products/${prod.text}`}>
+            <Cards path={prod.path} text={prod.text} alt={prod.alt}/>
+          </Link>
+        })}
         </div>
       </div>
     </div>

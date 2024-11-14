@@ -1,0 +1,4 @@
+#headContainer{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}

@@ -12,21 +12,24 @@
     margin: 20px;
 }
 
-#searchdiv input{
-    background-color: var(--light-blue);
-    border-radius: 30px;
-    display: block;
-    width: 40vw;
-    margin: auto;
-    padding: 15px 3px;
-    border: none;
-    outline: none;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 #searchicon{
     position: absolute;
     top: 13px;
     right: 10rem;
     width: 40vw;
+}
+
+#product_Container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+    gap: 20px;
+    width: 90%;
+    margin:auto;
+    justify-content: center;
+}
+
+#product_Container div{
+    width: 300px;
+    height: 300px;
 }

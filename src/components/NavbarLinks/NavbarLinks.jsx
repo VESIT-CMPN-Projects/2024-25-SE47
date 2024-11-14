@@ -1,48 +1,79 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import styles from "../Navbar/Navbar.module.css"
+import { IconButton, Menu, MenuItem } from "@mui/material";
+import { useState } from "react";
+import { MdArrowDropDown } from "react-icons/md";
 
-const NavbarLinks = ({burger, setActive, active}) => {
+const NavbarLinks = ({ burger, setActive, active }) => {
 
-  const onClickBurgerMenu = ()=>{
-    if(burger){
-    setActive(!active)
+  const [dropdown, setDropdown] = useState(false);
+  const open = dropdown
+
+  const onClickBurgerMenu = () => {
+    if (burger) {
+      setActive(!active);
     }
+  };
+
+  const handleClick = (e)=>{
+    setDropdown(e.currentTarget)
+    onClickBurgerMenu();
   }
+
+  const handleClose = ()=>{
+    setDropdown(null);
+  }
+
+  const menustyle = {
+    "borderBottom": "1px solid inherit",
+    "color": 'inherit'
+  }
+
   return (
     <ul>
-    <Link to={"/"} onClick={onClickBurgerMenu}>
-      <li>Home</li>
-    </Link>
-    <Link to={"/about"} onClick={onClickBurgerMenu}>
-      <li>About</li>
-    </Link>
-    <div>
-    <select name="productId" id="product">
-    <option value="">
-    <Link to={"/products"} onClick={onClickBurgerMenu}>
-      <li>Products <MdOutlineKeyboardArrowDown className={styles.icon}/></li>
-    </Link>
-    </option>
-      <option value="Grain">Grain</option>
-      <option value="Spices">Spices</option>
-      <option value="Fruits">Fruits</option>
-      <option value="Lentils">Lentils</option>
-      <option value="Pulses">Pulses</option>
-    </select>
-    </div>
-    <Link to={"/certificates"} onClick={onClickBurgerMenu}>
-      <li>Certificates</li>
-    </Link>
-    <Link to={"/testimonials"} onClick={onClickBurgerMenu}>
-      <li>Our Customers</li>
-    </Link>
-    <Link to={"/contacts"} onClick={onClickBurgerMenu}>
-      <button>Contact Us</button>
-    </Link>
-  </ul>
-  )
-}
+      <Link to={"/"} onClick={onClickBurgerMenu}>
+        <li>Home</li>
+      </Link>
+      <Link to={"/about"} onClick={onClickBurgerMenu}>
+        <li>About</li>
+      </Link>
+      <IconButton
+        color="inherit"
+        aria-label="more"
+        aria-controls={open? 'menu': undefined}
+        aria-haspopup="true"
+        onClick={handleClick}
+        sx={{fontSize: "1rem"}}
+      >
+        <Link to="/products">Products</Link><MdArrowDropDown />
+      </IconButton>
 
-export default NavbarLinks
+      {/* Dropdown */}
+
+        <Menu 
+          anchorEl={dropdown}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            'aria-labelledby': 'more-button',
+          }}>
+          <MenuItem onClick={handleClose} to={"/products"} sx={menustyle}>Grain</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products"} sx={menustyle}>Spices</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products"} sx={menustyle}>Lentils</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products"} sx={menustyle}>Fruits</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products"} sx={menustyle}>Pulses</MenuItem>
+        </Menu>
+      <Link to={"/certificates"} onClick={onClickBurgerMenu}>
+        <li>Certificates</li>
+      </Link>
+      <Link to={"/testimonials"} onClick={onClickBurgerMenu}>
+        <li>Our Customers</li>
+      </Link>
+      <Link to={"/contacts"} onClick={onClickBurgerMenu}>
+        <button>Contact Us</button>
+      </Link>
+    </ul>
+  );
+};
+
+export default NavbarLinks;

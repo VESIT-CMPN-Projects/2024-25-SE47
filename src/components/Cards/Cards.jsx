@@ -4,8 +4,10 @@ import styles from "./cards.module.css"
 const Cards = ({path, text, alt}) => {
   return (
     <div className={styles.cards}>
+    <div id={styles.image_container}> 
       <img src={path} alt={alt}/>
-      <h3>{text}</h3>
+    </div>
+    <h3>{text}</h3>
     </div>
   )
 }

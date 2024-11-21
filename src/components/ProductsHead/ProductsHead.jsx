@@ -7,8 +7,7 @@ const ProductsHead = ({title}) => {
   
   return (
     <div id={styles.headContainer}>
-       <div>
-        <img src={product.path} alt={title} />
+       <div id={styles.image} style={{backgroundImage: `url(${product.image})`,backgroundPosition: "center center", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
        </div>
        <h2>{title}</h2>
     </div>

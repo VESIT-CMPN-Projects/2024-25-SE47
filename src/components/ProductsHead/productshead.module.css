@@ -1,4 +1,19 @@
 #headContainer{
     display: grid;
     grid-template-columns: 60% 40%;
+    height: 40vh;
+}
+
+#image{
+width: 100%;
+height: 100%;
+}
+
+#headContainer h2{
+ background-color: var(--light-blue);
+ font-size: 4rem;
+ color: var(--secondary-color);
+ font-family: var(--primary-font);
+ text-align: center;
+ line-height: 40vh;
 }

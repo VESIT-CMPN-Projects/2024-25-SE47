@@ -57,7 +57,7 @@ const Landing = () => {
         <div className={styles.cardSlider}>
       <Slider {...settings}>
         {products.map((prod, index) => (
-          <Cards key={index} path={prod.path} text={prod.text} alt={prod.alt}/>
+          <Cards key={index} path={prod.image} text={prod.text} alt={prod.alt}/>
         ))}
       </Slider>
     </div>

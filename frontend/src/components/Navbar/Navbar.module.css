@@ -32,6 +32,13 @@ nav ul button{
     padding: 5px 8px;
     border: none;
     font-size: 1rem;
+    cursor: pointer;
+}
+nav ul button:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    transition: .5s;
 }
 
 #logo{

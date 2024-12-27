@@ -71,7 +71,7 @@ const Products = () => {
         <div id={styles.product_Container}>
         {products.map((prod, index) => {
            return <Link  key={index} to={`/products/${prod.text}`}>
-            <Cards path={prod.path} text={prod.text} alt={prod.alt}/>
+            <Cards path={prod.image} text={prod.text} alt={prod.alt}/>
           </Link>
         })}
         </div>

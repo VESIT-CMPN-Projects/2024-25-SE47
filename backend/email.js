@@ -33,8 +33,8 @@ const sendCustomerMail = (req, res)=>{
             console.log(error)
             res.status(500).send("Failed to send mail");
         }else{
-            console.log("Email Sent"+ info.response);
-            res.status(200).send("Email sent successfully!")
+            console.log("Email Sent: "+ info.response);
+            res.status(200).json({message: "Email sent successfully!"})
         }
     });
 }

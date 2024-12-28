@@ -68,7 +68,7 @@ const Contact = () => {
   return (
     <div>
       <Pageshead text={"Contact Us"} />
-      <form>
+      <form onSubmit={handleSubmit} method="post">
         <div
           style={{
             display: "flex",
@@ -94,7 +94,7 @@ const Contact = () => {
           <label htmlFor="cName">
             Comapany Name<span style={{ color: "red" }}>*</span>
           </label>
-          <input type="email" name="cName" id="cName" value={form.cName} onChange={handleChange}/>
+          <input type="text" name="cName" id="cName" value={form.cName} onChange={handleChange}/>
         </div>
         <div className={styles.input_container}>
           <label htmlFor="email">
@@ -125,7 +125,7 @@ const Contact = () => {
           <button
             className="btn" id={styles.submitbtn}
             style={{ fontSize: "1rem", display: "block", margin: "auto" }}
-          type="button" onSubmit={handleSubmit}>
+          type="submit">
             Submit
           </button>
         </div>

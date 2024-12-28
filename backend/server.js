@@ -9,10 +9,20 @@ const app = express();
 app.use(express.json())
 app.use(
   cors({
-    origin: process.env.FRONTENDURL,
+    origin: (origin, callback) => {
+      const originWithoutSlash = origin ? origin.replace(/\/$/, '') : origin;
+      const allowedOrigin = process.env.FRONTENDURL;
+
+      if (originWithoutSlash === allowedOrigin || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    allowedHeaders: ['Content-Type', 'Authorization'],
   })
 );
-// app.use(cors())
 
 app.get("/", (req, res) => {
   res.send("Welcome to Arasco India Private Limited!");

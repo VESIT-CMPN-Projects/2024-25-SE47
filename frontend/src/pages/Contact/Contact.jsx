@@ -3,6 +3,7 @@ import styles from "./contact.module.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -28,7 +29,40 @@ const Contact = () => {
 
   const handleSubmit = (e)=>{
      e.preventDefault();
-     fetch("")
+     fetch(`${import.meta.env.VITE_API_BACKENDURL}/email`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form),
+    })
+    .then((response)=>response.json())
+    .then((data)=>{
+      console.log(data)
+      toast.success('Submit Successfully', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    })
+    .catch((err)=>{
+      console.log(err)
+      toast.error('Failed to Send! Please report at below email', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    })
   }
   
   return (

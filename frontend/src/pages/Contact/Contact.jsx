@@ -4,16 +4,24 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import Select from 'react-select';
+import countryList from 'react-select-country-list';
+
 
 const Contact = () => {
+  const options = countryList().getData();
   const [form, setForm] = useState({
     fName: "",
     lName: "",
     cName: "",
     email: "",
     phone: "",
-    message: ""
+    productDetails: "",
+    product: "",
+    country: ""
   })
+
+ 
 
   const handleChange = (e)=>{
     setForm((prev)=>{
@@ -80,19 +88,19 @@ const Contact = () => {
             <label htmlFor="fName">
               First Name<span style={{ color: "red" }}>*</span>
             </label>
-            <input id="fName" name="fName" type="text" value={form.fName} onChange={handleChange}/>
+            <input id="fName" name="fName" type="text" value={form.fName} onChange={handleChange} required={true}/>
           </div>
 
           <div className={styles.input_container}>
             <label htmlFor="lName">
               Last Name<span style={{ color: "red" }}>*</span>
             </label>
-            <input type="text" name="lName" id="lName" value={form.lName} onChange={handleChange}/>
+            <input type="text" name="lName" id="lName" value={form.lName} onChange={handleChange} required={true}/>
           </div>
         </div>
         <div className={styles.input_container}>
           <label htmlFor="cName">
-            Comapany Name<span style={{ color: "red" }}>*</span>
+            Company Name
           </label>
           <input type="text" name="cName" id="cName" value={form.cName} onChange={handleChange}/>
         </div>
@@ -102,9 +110,29 @@ const Contact = () => {
           </label>
           <input type="email" name="email" id="email" value={form.email} onChange={handleChange}
           />
+          
         </div>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            gap: "20px",
+          }}
+        >
+      <div className={styles.input_container}>
+      <label>Country: <span style={{ color: "red" }}>*</span></label>
+      <Select
+        options={options}
+        value={form.country}
+        name="country"
+        onChange={handleChange}
+        placeholder="Country"
+        id={styles.country}
+      />
+    </div>
         <div className={styles.input_container}>
-          <label htmlFor="phonr">
+          <label htmlFor="phone">
             Phone Number <span style={{ color: "red" }}>*</span>
           </label>
           <PhoneInput
@@ -112,15 +140,28 @@ const Contact = () => {
             enableSearch={true}
             value={form.phone}
             onChange={(phone)=>setPhone(phone)}
-            inputStyle={{padding: "5px", paddingLeft: "50px", width: "100%"}}
+            inputStyle={{padding: "9px", paddingLeft: "50px", width: "100%"}}
           />
         </div>
-        <div className={styles.input_container}>
-          <label htmlFor="message">
-            Write your Requests / Queries here:<span style={{ color: "red" }}>*</span>
-          </label>
-           <textarea name="message" id="message" value={form.message} cols="82" rows="10" onChange={handleChange}></textarea>
         </div>
+
+
+        <div className={styles.input_container}>
+          <label htmlFor="product">
+            Product/Services Looking for<span style={{ color: "red" }}>*</span>
+          </label>
+          <input type="text" name="product" id="product" value={form.email} onChange={handleChange}
+          />
+        </div>
+
+
+        <div className={styles.input_container}>
+          <label htmlFor="productDetails">
+            Details of the Product Required<span style={{ color: "red" }}>*</span>
+          </label>
+           <textarea name="productDetails" id="productDetails" value={form.productDetails} cols="82" rows="10" onChange={handleChange}></textarea>
+        </div>
+
         <div className={styles.input_container}>
           <button
             className="btn" id={styles.submitbtn}

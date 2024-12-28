@@ -3,6 +3,8 @@ import spices from "../assets/spices.png";
 import fruits from "../assets/fruits.png"
 import pulses from "../assets/pulses.png"
 import oil from "../assets/oil.png"
+import sugar from "../assets/sugar/sugar.jpg"
+import tea from "../assets/tea/tea.png"
 
 const populaproducts = [
     {
@@ -21,7 +23,7 @@ const populaproducts = [
     },
     {
         image: spices,
-        text: "powders",
+        text: "Powders",
         alt: "powders",
         path: "spices.png",
         description: "Leading Exporters, Wholesaler and Trader of Coriander L Powder, Cumin Powder, Turmeric Powder and Guar Gum Powder from Delhi, India."
@@ -46,6 +48,20 @@ const populaproducts = [
         alt: "Oils",
         path: "oils.png",
         description: "Leading Exporters, Wholesaler and Trader of Wood Pressed Coconut Oil, Wood Pressed Groundnut Oil, Mustard Oil, Palm Oil, Olive Oil and Wood Pressed Sesame Oil from Delhi, India."
+    },
+    {
+        image: sugar,
+        text: "Sugar",
+        alt: "Sugar",
+        path: "sugar.jpg",
+        description: "Leading Exporters, Wholesaler and Trader of and Raw Brown Sugar Powder , White sugar, Jaggery from New Delhi, India."
+    },
+    {
+        image: tea,
+        text: "Tea",
+        alt: "Tea",
+        path: "tea.png",
+        description: "Tea is a soothing beverage enjoyed worldwide, crafted from steeped leaves or herbs. It comes in various types like black, green, white, or herbal, each offering unique flavors and benefits. Rich in antioxidants, it promotes relaxation and wellness. Perfect for mornings or moments of calm, tea connects cultures and warms the soul."
     },
 ]
 

@@ -1,4 +1,8 @@
 /* Products Styles */
+/* #products{
+    background-color: #e3e6e6;
+} */
+
 #firstImage{
     height: 50vh;
     background: url(../../assets/landingbg.png);

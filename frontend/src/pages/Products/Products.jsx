@@ -25,7 +25,7 @@ const Products = () => {
   }
 
   return (
-    <div>
+    <div id={styles.products}>
       <div id={styles.firstImage}></div>
       <Pageshead text={"Products"}/>
       <div id={styles.searchdiv}>

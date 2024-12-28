@@ -73,7 +73,7 @@
 
 <body>
     <div id="mainContainer">
-        <img src="https://arascoexportindia.netlify.app/assets/logo.png" alt="logo">
+        <img src="https://arascoexportindia.netlify.app/assets/logo.png" alt="logo" loading="lazy">
         <h2>New Customer Needs Your Help!</h2>
         <div id="box">
             <div id="boxHead">
@@ -97,12 +97,20 @@
                     <span class="info">{{email}}</span>
                 </div>
                 <div>
+                    <span class="label">Country: </span>
+                    <span class="info">{{country}}</span>
+                </div>
+                <div>
                     <span class="label">Phone Number:</span>
                     <span class="info">{{phone}}</span>
                 </div>
                 <div>
-                    <span class="label">Message:</span>
-                    <span class="info">{{message}}</span>
+                    <span class="label">Product / Service Looking for: </span>
+                    <span class="info">{{product}}</span>
+                </div>
+                <div>
+                    <span class="label">Details of Product Required:</span>
+                    <span class="info">{{productDetails}}</span>
                 </div>
             </div>
         </div>

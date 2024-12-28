@@ -11,7 +11,7 @@ const Navbar = () => {
     <>
       <nav id={styles.normalnav}>
         <div id={styles.logo}>
-          <img src={logo} alt={"Arasco logo"} />
+          <img src={logo} alt={"Arasco logo"} loading="lazy"/>
           <div>
             <span>Arasco</span>
             <span>Export India</span>
@@ -22,7 +22,7 @@ const Navbar = () => {
       </nav>
       <nav id={styles.burgerMenu}>
         <div id={styles.logo}>
-          <img src={logo} alt={"Arasco logo"} />
+          <img src={logo} alt={"Arasco logo"} loading="lazy"/>
           <div>
             <span>Arasco</span>
             <span>Export India</span>

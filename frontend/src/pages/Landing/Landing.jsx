@@ -31,10 +31,10 @@ const Landing = () => {
     <div>
       <section id={styles.landing}></section>
       <div>
-        <img src={globe} alt="Globe" />
+        <img src={globe} alt="Globe" loading="lazy"/>
       </div>
       <section id={styles.globe}>
-        <img src={indiaglobe} alt="India Globe" />
+        <img src={indiaglobe} alt="India Globe" loading="lazy"/>
         <div>
           <h1>ARASCO EXPORT INDIA</h1>
           <h3>Export Import and Trading of all Types of Food Items</h3>
@@ -50,7 +50,7 @@ const Landing = () => {
         helping your products reach markets across the globe.
       </p>
       <div id={styles.cargo}>
-        <img src={cargo} alt="Cargo" />
+        <img src={cargo} alt="Cargo" loading="lazy"/>
       </div>
       <section id={styles.products}>
         <h2>Popular Products</h2>

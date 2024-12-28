@@ -5,7 +5,7 @@ const Cards = ({path, text, alt}) => {
   return (
     <div className={styles.cards}>
     <div id={styles.image_container}> 
-      <img src={path} alt={alt}/>
+      <img src={path} alt={alt} loading="lazy"/>
     </div>
     <h3>{text}</h3>
     </div>

@@ -3,14 +3,38 @@ import styles from "./contact.module.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import { useState } from "react";
-import EmailTemplate from "../EmailTemplate";
 
 const Contact = () => {
-  const [phone, setPhone] = useState("");
+  const [form, setForm] = useState({
+    fName: "",
+    lName: "",
+    cName: "",
+    email: "",
+    phone: "",
+    message: ""
+  })
+
+  const handleChange = (e)=>{
+    setForm((prev)=>{
+      return {...prev, [e.target.name]: e.target.value}
+    })
+  }
+
+  const setPhone = (phone)=>{
+    setForm((prev)=>{
+      return {...prev, phone}
+    })
+  }
+
+  const handleSubmit = (e)=>{
+     e.preventDefault();
+     fetch("")
+  }
+  
   return (
     <div>
       <Pageshead text={"Contact Us"} />
-      <form action="">
+      <form>
         <div
           style={{
             display: "flex",
@@ -19,59 +43,59 @@ const Contact = () => {
           }}
         >
           <div className={styles.input_container}>
-            <label htmlFor="">
+            <label htmlFor="fName">
               First Name<span style={{ color: "red" }}>*</span>
             </label>
-            <input type="text" />
+            <input id="fName" name="fName" type="text" value={form.fName} onChange={handleChange}/>
           </div>
 
           <div className={styles.input_container}>
-            <label htmlFor="">
+            <label htmlFor="lName">
               Last Name<span style={{ color: "red" }}>*</span>
             </label>
-            <input type="text" />
+            <input type="text" name="lName" id="lName" value={form.lName} onChange={handleChange}/>
           </div>
         </div>
         <div className={styles.input_container}>
-          <label htmlFor="">
+          <label htmlFor="cName">
             Comapany Name<span style={{ color: "red" }}>*</span>
           </label>
-          <input type="email" />
+          <input type="email" name="cName" id="cName" value={form.cName} onChange={handleChange}/>
         </div>
         <div className={styles.input_container}>
-          <label htmlFor="">
+          <label htmlFor="email">
             Comapany Email<span style={{ color: "red" }}>*</span>
           </label>
-          <input type="email" />
+          <input type="email" name="email" id="email" value={form.email} onChange={handleChange}
+          />
         </div>
         <div className={styles.input_container}>
-          <label htmlFor="">
+          <label htmlFor="phonr">
             Phone Number <span style={{ color: "red" }}>*</span>
           </label>
           <PhoneInput
             country={"in"}
             enableSearch={true}
-            value={phone}
-            onChange={(phone) => setPhone(phone)}
+            value={form.phone}
+            onChange={(phone)=>setPhone(phone)}
             inputStyle={{padding: "5px", paddingLeft: "50px", width: "100%"}}
           />
         </div>
         <div className={styles.input_container}>
-          <label htmlFor="question-image">
+          <label htmlFor="message">
             Write your Requests / Queries here:<span style={{ color: "red" }}>*</span>
           </label>
-           <textarea name="request" id="request" cols="82" rows="10"></textarea>
+           <textarea name="message" id="message" value={form.message} cols="82" rows="10" onChange={handleChange}></textarea>
         </div>
         <div className={styles.input_container}>
           <button
             className="btn" id={styles.submitbtn}
             style={{ fontSize: "1rem", display: "block", margin: "auto" }}
-          >
+          type="button" onSubmit={handleSubmit}>
             Submit
           </button>
         </div>
       </form>
-      <EmailTemplate/>
     </div>
   );
 };

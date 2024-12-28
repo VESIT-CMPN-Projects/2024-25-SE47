@@ -15,7 +15,7 @@ const Product = () => {
 
   return (
     <div id={styles.oneProduct}>
-      <Pageshead text={"Products"} />
+      <Pageshead text={"PRODUCTS"} />
       <ProductsHead title={product} />
       <p className={styles.desc}>{item.description}</p>
       <div className={styles.cardContainer}>

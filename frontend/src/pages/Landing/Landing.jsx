@@ -41,6 +41,7 @@ const Landing = () => {
         </div>
       </section>
       <p id={styles.intro}>
+
         As a trusted name in the food industry, <strong>ARASCO</strong> takes
         pride in exporting and importing a diverse range of premium products.
         From the finest spices to fresh fruits, high-quality rice, pulses, and

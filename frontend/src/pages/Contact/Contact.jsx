@@ -3,6 +3,7 @@ import styles from "./contact.module.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import { useState } from "react";
+import EmailTemplate from "../EmailTemplate";
 
 const Contact = () => {
   const [phone, setPhone] = useState("");
@@ -70,6 +71,7 @@ const Contact = () => {
           </button>
         </div>
       </form>
+      <EmailTemplate/>
     </div>
   );
 };

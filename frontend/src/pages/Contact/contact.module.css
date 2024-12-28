@@ -64,3 +64,12 @@ input:focus, textarea:focus {
     border: 1px solid var(--primary-color);
     transition: .5s;
 }
+
+@media (max-width: 850px) {
+    form{
+        width: 80%;
+        margin: 3rem auto;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 8px 0px, rgba(0, 0, 0, 0.1) 0px 5px 15px;
+        padding: 30px;
+    }
+}

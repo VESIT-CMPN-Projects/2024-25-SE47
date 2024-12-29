@@ -1,1 +1,18 @@
 /* Testimonials Styles */
+#globe {
+    background: url(../../assets/trianglebg.png) center center/cover no-repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#globe img {
+    width: 40%;
+}
+
+#globe p {
+    color: var(--secondary-color);
+    font-family: var(--primary-font);
+    text-align: center;
+    font-size: 3rem;
+}

@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import { X, ChevronLeft, ChevronRight, Share, Square, Search } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import fassai from "../../assets/certificates/Fassai.jpg"
+import gst from "../../assets/certificates/GST.jpg"
+import importexport from "../../assets/certificates/importexport.jpg"
+import udhyam from "../../assets/certificates/udhyam.jpg"
 
 const styles = {
   container: {
@@ -46,12 +50,14 @@ const styles = {
   },
   fullscreenOverlay: {
     position: 'fixed',
+    overflowY: "scroll",
     inset: 0,
     backgroundColor: 'black',
     zIndex: 1000,
     display: 'flex',
     flexDirection: 'column',
   },
+
   navbar: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -101,7 +107,7 @@ const styles = {
     right: '16px',
   },
   fullscreenImage: {
-    maxHeight: '100%',
+    maxHeight: '90%',
     maxWidth: '100%',
     objectFit: 'contain',
   },
@@ -113,9 +119,10 @@ const DocumentViewer = () => {
   const [isHovered, setIsHovered] = useState(null);
 
   const documents = [
-    { id: 1, title: 'APEDA', image: '/api/placeholder/300/400' },
-    { id: 2, title: 'FIEO', image: '/api/placeholder/300/400' },
-    { id: 3, title: 'Certificate of Incorporation', image: '/api/placeholder/300/400' }
+    { id: 1, title: 'Fassai', image: fassai },
+    { id: 2, title: 'GST', image: gst},
+    { id: 3, title: 'Import Export', image: importexport },
+    { id: 4, title: 'Udhyam', image: udhyam }
   ];
 
   const handlePrevious = () => {
@@ -164,15 +171,6 @@ const DocumentViewer = () => {
               {documents[currentIndex].title}
             </div>
             <div style={styles.navbarActions}>
-              <button style={styles.iconButton}>
-                <Share size={24} />
-              </button>
-              <button style={styles.iconButton}>
-                <Square size={24} />
-              </button>
-              <button style={styles.iconButton}>
-                <Search size={24} />
-              </button>
               <button 
                 style={styles.iconButton}
                 onClick={() => setIsFullscreen(false)}

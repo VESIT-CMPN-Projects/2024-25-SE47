@@ -4,6 +4,7 @@
 frontend/.env
 backend/.env
 *.env
+*.pdf
 
 logs
 *.log

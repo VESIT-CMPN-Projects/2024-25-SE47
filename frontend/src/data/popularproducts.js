@@ -1,5 +1,6 @@
 import grains from "../assets/grains.png";
 import spices from "../assets/spices.png";
+import powders from "../assets/powders/powders.jpg"
 import fruits from "../assets/fruits.png"
 import pulses from "../assets/pulses.png"
 import oil from "../assets/oil.png"
@@ -22,7 +23,7 @@ const populaproducts = [
         description: "Leading Exporters, Wholesaler and Trader of Indian Green Cardamom, Indian Black Pepper, Cumin Seeds, Black Mustard Seeds, Fenugreek Seeds, Fennel Seeds, Dry Cloves, Coriander Seeds, Nutmeg Seeds, Dried Kashmiri Red Chilli, Dried Red Long Chilli With Stem, Indian Turmeric Finger and Cinnamon Stick from Delhi, India."
     },
     {
-        image: spices,
+        image: powders,
         text: "Powders",
         alt: "powders",
         path: "spices.png",

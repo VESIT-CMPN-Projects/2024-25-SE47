@@ -8,11 +8,12 @@ import udhyam from "../../assets/certificates/udhyam.jpg"
 const styles = {
   container: {
     width: '100%',
-    margin:"30px"
+    padding:"30px",
+    backgroundColor: 'var(--too-light-blue)'
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+    gridTemplateColumns: 'repeat(3, 1fr)',
     gap: '50px',
     padding: '20px',
   },
@@ -41,12 +42,12 @@ const styles = {
     position: 'absolute',
     bottom: 0,
     width: '100%',
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: '#fff',
     padding: '8px',
     margin: 0,
-    color: 'white',
+    color: 'var(--primary-color)',
     textAlign: 'center',
-    fontSize: '14px',
+    fontSize: '20px',
   },
   fullscreenOverlay: {
     position: 'fixed',

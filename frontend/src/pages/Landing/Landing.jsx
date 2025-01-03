@@ -79,7 +79,7 @@ const Landing = () => {
           })}
         </div>
       </section>
-      <section id={styles.clients}>
+      {/* <section id={styles.clients}>
         <h2>WHAT OUR CLIENTS SAY...</h2>
         <p>
           There are many variations of passages of Lorem Ipsum available, but
@@ -89,7 +89,7 @@ const Landing = () => {
           to be sure there is not anything embarrassing hidden in the middle of
           text.{" "}
         </p>
-      </section>
+      </section> */}
     </div>
   );
 };

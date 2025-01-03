@@ -1,7 +1,7 @@
 /* Product Styles */
 
 .desc, .cardContainer{
-    margin: 2.5rem 6rem;
+    padding: 2.5rem 6rem;
     font-size: 1.5rem;
     font-family: var(--secondary-font);
 }
@@ -9,6 +9,8 @@
 .cardContainer{
     color: var(--secondary-color);
     font-family: var(--primary-font);
+    background-color: var(--too-light-blue);
+
 }
 
 .cardgrid{

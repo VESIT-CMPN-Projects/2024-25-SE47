@@ -22,9 +22,9 @@ const Footer = () => {
           <Link to={"/certificates"}>
             <li>Certificates</li>
           </Link>
-          <Link to={"/testimonials"}>
+          {/* <Link to={"/testimonials"}>
             <li>Our Customers</li>
-          </Link>
+          </Link> */}
           <Link to={"/contacts"}>
             <li>Contact Us</li>
           </Link>
@@ -33,23 +33,23 @@ const Footer = () => {
         <div>
           <div className={styles.head}>Products</div>
           <ul>
-          <Link to={"/"}>
-            <li>Grain</li>
+          <Link to={"/products/Rice"}>
+            <li>Rice</li>
           </Link>
-          <Link to={"/about"}>
+          <Link to={"/products/Spices"}>
             <li>Spices</li>
           </Link>
-          <Link to={"/products"}>
+          <Link to={"/products/Pulses"}>
             <li>Pulses</li>
           </Link>
-          <Link to={"/certificates"}>
-            <li>Lentils</li>
+          <Link to={"/products/Oils"}>
+            <li>Oils</li>
           </Link>
-          <Link to={"/testimonials"}>
+          <Link to={"/products/Fruits"}>
             <li>Fruits</li>
           </Link>
-          <Link to={"/contacts"}>
-            <li>Vegetables</li>
+          <Link to={"/products/Tea"}>
+            <li>Tea</li>
           </Link>
           </ul>
         </div>

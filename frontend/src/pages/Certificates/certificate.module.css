@@ -1,7 +1,10 @@
 /* Certificates Styles */
-#pdfGrid{
-    display: "grid";
-    grid-template-columns: repeat(3, 1fr);
-    gap: "20px";
-    padding: "20px";
-} 
+
+#para{
+    width: 70%;
+    margin: 20px auto;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-weight: 600;
+    text-align: center;
+}

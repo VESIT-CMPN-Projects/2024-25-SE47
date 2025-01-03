@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import { useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
+import styles from "../Navbar/Navbar.module.css"
 
 const NavbarLinks = ({ burger, setActive, active }) => {
 
@@ -30,7 +31,7 @@ const NavbarLinks = ({ burger, setActive, active }) => {
   }
 
   return (
-    <ul>
+    <ul id={styles.list}>
       <Link to={"/"} onClick={onClickBurgerMenu}>
         <li>Home</li>
       </Link>
@@ -57,11 +58,14 @@ const NavbarLinks = ({ burger, setActive, active }) => {
           MenuListProps={{
             'aria-labelledby': 'more-button',
           }}>
-          <MenuItem onClick={handleClose} to={"/products"} sx={menustyle}>Grain</MenuItem>
-          <MenuItem onClick={handleClose} to={"/products"} sx={menustyle}>Spices</MenuItem>
-          <MenuItem onClick={handleClose} to={"/products"} sx={menustyle}>Lentils</MenuItem>
-          <MenuItem onClick={handleClose} to={"/products"} sx={menustyle}>Fruits</MenuItem>
-          <MenuItem onClick={handleClose} to={"/products"} sx={menustyle}>Pulses</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products/Rice"} sx={menustyle}>Rice</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products/Spices"} sx={menustyle}>Spices</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products/Powders"} sx={menustyle}>Powders</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products/Fruits"} sx={menustyle}>Fruits</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products/Pulses"} sx={menustyle}>Pulses</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products/Tea"} sx={menustyle}>Tea</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products/Oils"} sx={menustyle}>Oils</MenuItem>
+          <MenuItem onClick={handleClose} to={"/products/Sugar"} sx={menustyle}>Sugar</MenuItem>
         </Menu>
       <Link to={"/certificates"} onClick={onClickBurgerMenu}>
         <li>Certificates</li>

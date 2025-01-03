@@ -95,6 +95,18 @@ nav ul button:hover{
     padding: 10px;
 }
 
+#list a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#list a:hover{
+ background-color: rgb(241, 244, 248);
+}
+
 .linkContainer ul a:hover, #cross:hover{
     background-color: var(--too-light-blue);
 }

@@ -37,3 +37,7 @@
     width: 300px;
     height: 300px;
 }
+
+#bg{
+    background-color: var(--too-light-blue);
+}

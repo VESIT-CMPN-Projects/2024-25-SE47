@@ -27,6 +27,7 @@ const Products = () => {
   return (
     <div id={styles.products}>
       <div id={styles.firstImage}></div>
+      <div id={styles.bg}>
       <Pageshead text={"Products"}/>
       <div id={styles.searchdiv}>
 
@@ -75,6 +76,7 @@ const Products = () => {
           </Link>
         })}
         </div>
+      </div>
       </div>
     </div>
   )

@@ -45,8 +45,7 @@ const Contact = () => {
       body: JSON.stringify(form),
     })
     .then((response)=>response.json())
-    .then((data)=>{
-      console.log(data)
+    .then(()=>{
       toast.success('Submit Successfully', {
         position: "bottom-center",
         autoClose: 5000,

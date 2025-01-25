@@ -70,9 +70,9 @@ const NavbarLinks = ({ burger, setActive, active }) => {
       <Link to={"/certificates"} onClick={onClickBurgerMenu}>
         <li>Certificates</li>
       </Link>
-      {/* <Link to={"/testimonials"} onClick={onClickBurgerMenu}>
+      <Link to={"/testimonials"} onClick={onClickBurgerMenu}>
         <li>Our Customers</li>
-      </Link> */}
+      </Link>
       <Link to={"/contacts"} onClick={onClickBurgerMenu}>
         <button>Contact Us</button>
       </Link>

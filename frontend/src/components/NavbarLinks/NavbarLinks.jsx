@@ -47,8 +47,12 @@ const NavbarLinks = ({ burger, setActive, active }) => {
         sx={{fontSize: "1rem"}}
       >
         <Link to="/products">Products</Link><MdArrowDropDown />
+        
       </IconButton>
-
+      <Link to={"/ecommerce/ecommerce"} onClick={onClickBurgerMenu}>
+        <li>E-commerce</li>
+      </Link>
+      
       {/* Dropdown */}
 
         <Menu 

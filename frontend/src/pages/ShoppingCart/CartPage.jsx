@@ -9,9 +9,12 @@ const CartPage = () => {
     { id: 3, name: "Quinoa", price: 20, quantity: 3 },
   ]);
 
-  // Function to calculate total price
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
+  const handleCheckout = () => {
+    alert("🛒 Order has been placed!!"); // Show the pop-up message
+    setCartItems([]); // Empty the cart
+  };
   // Function to remove an item from cart
   const removeItem = (id) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
@@ -42,7 +45,12 @@ const CartPage = () => {
 
           <div className={styles.totalContainer}>
             <h2>Total Amount: ${totalPrice.toFixed(2)}</h2>
-            <button className={styles.checkoutButton}>Proceed to Checkout</button>
+
+            <button className={styles.checkoutBtn} onClick={handleCheckout}>
+              Proceed to Checkout
+            </button>
+
+
           </div>
         </>
       )}

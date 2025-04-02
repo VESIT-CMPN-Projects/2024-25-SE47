@@ -312,8 +312,11 @@ const Ecommerce = () => {
     {product.rating && <StarRating rating={parseFloat(product.rating)} />}
   </Link>
 ))}
-
       </div>
+       {/* Floating Button Redirecting to Cart Page */}
+       <Link to="/cart" className="floating-cart-btn">
+        🛒 View Cart
+      </Link>
     </div>
   );
 };

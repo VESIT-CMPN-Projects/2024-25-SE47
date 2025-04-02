@@ -26,16 +26,17 @@ const GoldenRiceInfo = () => {
             With its potential to enhance nutritional intake and support overall health, Golden Rice represents a promising development in addressing global micronutrient deficiencies.
           </p>
         </div>
-       
-      </div>
-      <div className={styles.orderNowContainer}>
-  <button className={styles.orderNowButton}>Order Now</button>
-</div>
 
-      
+      </div>
+      <div className={styles.orderButtonsContainer}>
+        <button className={styles.orderNowButton}>Order Now</button>
+        <button className={styles.addToCartButton}>Add to Cart</button>
+      </div>
+
+
       <div className={styles.ratingReviews}>
         <div className={styles.ratingSection}>
-          
+
           <h2>Rating</h2>
           <StarRating rating={4.7} />
         </div>
@@ -55,7 +56,7 @@ const GoldenRiceInfo = () => {
           </div>
         </div>
       </div>
-     
+
     </div>
   );
 };

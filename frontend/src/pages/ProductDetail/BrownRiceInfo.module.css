@@ -65,10 +65,20 @@
   display: block;
   margin-bottom: 5px;
 }
-.orderNowButton {
-  background-color: #ff6600; 
-  color: white;
-  width:65%;
+
+/* ✅ New Styling for Buttons */
+.orderButtonsContainer {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+  justify-content: center; /* Center-align buttons */
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Common button styling */
+.orderNowButton,
+.addToCartButton {
   font-size: 1.2rem;
   font-weight: bold;
   padding: 15px 30px;
@@ -77,18 +87,26 @@
   cursor: pointer;
   text-align: center;
   transition: background 0.3s ease-in-out;
+  width: auto; /* Avoid full width */
+  min-width: 150px; /* Ensure both buttons have a uniform size */
+}
+
+/* Styling for Order Now button */
+.orderNowButton {
+  background-color: #ff6600; /* Orange */
+  color: white;
 }
 
 .orderNowButton:hover {
-  background-color: #e65c00; 
+  background-color: #e65c00;
 }
 
-.orderNowContainer {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end; 
-  margin-top: 20px;
+/* Styling for Add to Cart button */
+.addToCartButton {
+  background-color: #4caf50; /* Green */
+  color: white;
 }
 
-
-
+.addToCartButton:hover {
+  background-color: #388e3c;
+}

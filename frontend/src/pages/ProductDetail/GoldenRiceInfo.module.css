@@ -1,0 +1,108 @@
+/* Container for the entire content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Flex container for the product row */
+.productRow {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Container for the image */
+.imageContainer {
+  flex: 1;
+  text-align: center;
+}
+
+/* Styling for the product image */
+.productImage {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 3px;
+}
+
+/* Container for the product information */
+.infoContainer {
+  flex: 2;
+}
+
+/* Styling for the product title */
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Styling for the product description */
+.description {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Container for ratings and reviews */
+.ratingReviews {
+  margin-top: 40px;
+}
+
+/* Styling for rating and reviews sections */
+.ratingSection,
+.reviewsSection {
+  margin-bottom: 30px;
+}
+
+/* Styling for section headings */
+.ratingSection h2,
+.reviewsSection h2 {
+  margin-bottom: 10px;
+}
+
+/* Styling for individual reviews */
+.review {
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Styling for reviewer name */
+.review strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.orderNowButton {
+  background-color: #ff6600; /* Vibrant orange */
+  color: white;
+  width:65%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.orderNowButton:hover {
+  background-color: #e65c00; /* Darker shade for hover effect */
+}
+
+/* Align Button to the Right */
+.orderNowContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Moves button to the right */
+  margin-top: 20px;
+}
+
+

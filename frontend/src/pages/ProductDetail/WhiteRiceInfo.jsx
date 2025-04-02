@@ -31,9 +31,9 @@ const WhiteRiceInfo = () => {
         </div>
       </div>
       
-      {/* Order Button */}
-      <div className={styles.orderNowContainer}>
-        <button className={styles.orderNowButton}>Order Now</button>
+      <div className={styles.orderButtonsContainer}>
+              <button className={styles.orderNowButton}>Order Now</button>
+              <button className={styles.addToCartButton}>Add to Cart</button>
       </div>
       
       {/* Rating & Reviews Section */}

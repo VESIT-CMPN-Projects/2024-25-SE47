@@ -35,8 +35,9 @@ const CinnamonStickInfo = () => {
         </div>
       </div>
       
-      <div className={styles.orderNowContainer}>
+      <div className={styles.orderButtonsContainer}>
         <button className={styles.orderNowButton}>Order Now</button>
+        <button className={styles.addToCartButton}>Add to Cart</button>
       </div>
       
       <div className={styles.ratingReviews}>

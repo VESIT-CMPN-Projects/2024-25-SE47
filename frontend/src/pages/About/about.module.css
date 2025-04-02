@@ -1,19 +1,25 @@
 /* About Styles */
-#globe{
+#globe {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
+    padding: 50px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 
-#globe div h1{
-    color: var(--secondary-color);
-    font-family: var(--primary-font);
-    text-align: center;
-}
+  #globe div h1 {
+    color: #333;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
 #globe img {
     width: 40%;
-}
+    border-radius: 50%;
+  }
 
 #globe div h1 {
     font-size: 5rem;
@@ -26,4 +32,7 @@
     font-weight: 600;
 }
 
-
+#globe div p {
+    color: #666;
+    font-size: 18px;
+}

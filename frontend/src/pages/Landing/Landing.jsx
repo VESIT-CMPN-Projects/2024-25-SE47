@@ -44,7 +44,7 @@ const Landing = () => {
 
         As a trusted name in the food industry, <strong>ARASCO</strong> takes
         pride in exporting and importing a diverse range of premium products.
-        From the finest spices to fresh fruits, high-quality rice, pulses, and
+        From the finest spices to fresh fruits,  pulses, and
         various other food items, ARASCO ensures that every product meets the
         highest international quality standards. Whether you are looking to
         import or export, ARASCO is committed to delivering excellence and

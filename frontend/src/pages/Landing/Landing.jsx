@@ -1,3 +1,4 @@
+import { useEffect } from "react"; // Import useEffect
 import styles from "./landing.module.css";
 import globe from "../../assets/globe.png";
 import indiaglobe from "../../assets/globeindia.png";
@@ -11,57 +12,71 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Landing = () => {
   const settings = {
-    dots: true, 
-    infinite: true, 
-    speed: 500, 
-    slidesToShow: 4, 
-    slidesToScroll: 1, 
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 768, 
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1, 
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
     ],
   };
 
+  useEffect(() => {
+    window.chtlConfig = { chatbotId: "3226674878" };
+
+    const script = document.createElement("script");
+    script.src = "https://chatling.ai/js/embed.js";
+    script.async = true;
+    script.dataset.id = "3226674878";
+    script.id = "chatling-embed-script";
+
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div>
       <section id={styles.landing}></section>
       <div>
-        <img src={globe} alt="Globe" loading="lazy"/>
+        <img src={globe} alt="Globe" loading="lazy" />
       </div>
       <section id={styles.globe}>
-        <img src={indiaglobe} alt="India Globe" loading="lazy"/>
+        <img src={indiaglobe} alt="India Globe" loading="lazy" />
         <div>
           <h1>ARASCO EXPORT INDIA</h1>
           <h3>Export Import and Trading of all Types of Food Items</h3>
         </div>
       </section>
       <p id={styles.intro}>
-
         As a trusted name in the food industry, <strong>ARASCO</strong> takes
         pride in exporting and importing a diverse range of premium products.
-        From the finest spices to fresh fruits,  pulses, and
+        From the finest spices to fresh fruits, pulses, and
         various other food items, ARASCO ensures that every product meets the
         highest international quality standards. Whether you are looking to
         import or export, ARASCO is committed to delivering excellence and
         helping your products reach markets across the globe.
       </p>
       <div id={styles.cargo}>
-        <img src={cargo} alt="Cargo" loading="lazy"/>
+        <img src={cargo} alt="Cargo" loading="lazy" />
       </div>
       <section id={styles.products}>
         <h2>Popular Products</h2>
         <div className={styles.cardSlider}>
-      <Slider {...settings}>
-        {products.map((prod, index) => (
-          <Cards key={index} path={prod.image} text={prod.text} alt={prod.alt}/>
-        ))}
-      </Slider>
-    </div>
+          <Slider {...settings}>
+            {products.map((prod, index) => (
+              <Cards key={index} path={prod.image} text={prod.text} alt={prod.alt} />
+            ))}
+          </Slider>
+        </div>
       </section>
       <section id={styles.chooseus}>
         <h2>WHY CHOOSE US?</h2>
@@ -79,29 +94,6 @@ const Landing = () => {
           })}
         </div>
       </section>
-      {/* <section id={styles.clients}>
-        <h2>WHAT OUR CLIENTS SAY...</h2>
-        <p>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which do not look even slightly
-          believable. If you are going to use a passage of Lorem Ipsum, you need
-          to be sure there is not anything embarrassing hidden in the middle of
-          text.{" "}
-        </p>
-      </section> */}
-      <script>
-        {`
-          window.chtlConfig = { chatbotId: "3226674878" }
-        `}
-      </script>
-      <script
-        async
-        data-id="3226674878"
-        id="chatling-embed-script"
-        type="text/javascript"
-        src="https://chatling.ai/js/embed.js"
-      />
     </div>
   );
 };

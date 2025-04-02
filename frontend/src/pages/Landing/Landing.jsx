@@ -90,6 +90,18 @@ const Landing = () => {
           text.{" "}
         </p>
       </section> */}
+      <script>
+        {`
+          window.chtlConfig = { chatbotId: "3226674878" }
+        `}
+      </script>
+      <script
+        async
+        data-id="3226674878"
+        id="chatling-embed-script"
+        type="text/javascript"
+        src="https://chatling.ai/js/embed.js"
+      />
     </div>
   );
 };

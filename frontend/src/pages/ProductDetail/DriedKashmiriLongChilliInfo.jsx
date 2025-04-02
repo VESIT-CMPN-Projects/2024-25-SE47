@@ -36,9 +36,9 @@ const DriedKashmiriLongChilliInfo = () => {
         </div>
       </div>
       
-      {/* Order Now Button */}
-      <div className={styles.orderNowContainer}>
+      <div className={styles.orderButtonsContainer}>
         <button className={styles.orderNowButton}>Order Now</button>
+        <button className={styles.addToCartButton}>Add to Cart</button>
       </div>
 
       {/* Rating & Reviews Section */}

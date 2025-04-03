@@ -1,38 +1,131 @@
-/* About Styles */
-#globe {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+/* About Page Styles */
 
-  #globe div h1 {
-    color: #333;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
+/* 🌍 Globe Section */
+#globe {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px;
+}
 
 #globe img {
-    width: 40%;
-    border-radius: 50%;
-  }
+  width: 40%;
+  border-radius: 50%;
+}
 
 #globe div h1 {
-    font-size: 5rem;
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 #intro {
-    width: 50%;
-    margin: 20px auto;
-    font-family: var(--secondary-font);
-    font-weight: 600;
+  width: 50%;
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-weight: 600;
 }
 
-#globe div p {
-    color: #666;
-    font-size: 18px;
+/* 🎯 Mission & Vision */
+.missionVisionContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* Allows items to stack on smaller screens */
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  min-width: 280px; /* Ensures it doesn’t shrink too much */
+  text-align: center;
+}
+
+/* 👥 Team Section */
+#team {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.teamGrid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Stack team members on smaller screens */
+}
+
+.teamMember {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 250px;
+}
+
+/* 📱 Mobile & Tablet Responsive */
+@media screen and (max-width: 1024px) {
+  #globe {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center;
+  }
+
+  #globe img {
+      width: 70%; /* Increase size for better visibility */
+  }
+
+  #intro {
+      width: 80%;
+  }
+
+  .card {
+      width: 80%; /* Make cards take full width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #globe img {
+      width: 80%;
+  }
+
+  #globe div h1 {
+      font-size: 2rem;
+  }
+
+  .teamGrid {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .teamMember {
+      width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #globe img {
+      width: 90%;
+  }
+
+  #globe div h1 {
+      font-size: 1.8rem;
+  }
+
+  .missionVisionContainer {
+      flex-direction: column;
+  }
+
+  .card {
+      width: 95%;
+  }
 }

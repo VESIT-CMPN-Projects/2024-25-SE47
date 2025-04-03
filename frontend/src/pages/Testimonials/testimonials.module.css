@@ -1,5 +1,5 @@
 /* Testimonials Styles */
-#globe {
+/* #globe {
     background: url(../../assets/trianglebg.png) center center/cover no-repeat;
     display: flex;
     justify-content: space-around;
@@ -20,4 +20,77 @@
 .tag{
     width: 50vw;
     margin: auto;
+} */
+#globe {
+    background: url(../../assets/trianglebg.png) center center/cover no-repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    text-align: center;
 }
+
+#globe img {
+    width: 40%;
+    max-width: 500px;
+}
+
+#globe p {
+    color: var(--secondary-color);
+    font-family: var(--primary-font);
+    text-align: center;
+    font-size: 2.5rem;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.tag {
+    width: 50vw;
+    max-width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 1024px) {
+    #globe {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #globe img {
+        width: 50%;
+        max-width: 400px;
+    }
+
+    #globe p {
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #globe img {
+        width: 60%;
+        max-width: 350px;
+    }
+
+    #globe p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #globe img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    #globe p {
+        font-size: 1.5rem;
+    }
+
+    .tag {
+        width: 90vw;
+    }
+}
+

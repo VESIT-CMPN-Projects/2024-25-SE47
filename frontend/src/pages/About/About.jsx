@@ -6,6 +6,8 @@ const About = () => {
   return (
     <div id="about">
       <Pageshead text={"ABOUT US"} />
+
+      {/* 🌍 Company Overview */}
       <div id={styles.globe}>
         <img src={exportglobe} alt="India Globe" loading="lazy" />
         <div id={styles.intro}>
@@ -13,79 +15,94 @@ const About = () => {
           <p>
             ARASCO EXPORT INDIA PRIVATE LIMITED, based in New Delhi, India, has
             been a trusted supplier, exporter, and trader of premium food
-            products since 2023. With a diverse range of whole spices, pulses,
-            rice varieties, cashew nuts, edible oils, and sugar, the company
-            emphasizes quality, customer satisfaction, and global reach. Under
-            the leadership of Mr. Abdul Rashid Siddique, ARASCO has established
-            itself as a reliable name in the competitive food industry.
+            products since 2023. With a strong focus on whole spices, pulses, rice varieties, cashew nuts, edible oils, and sugar, the company has established a solid reputation for quality and customer satisfaction.
+
           </p>
-          <ul>
-            <li>
-              <strong>Whole Spices: </strong>
-              Nutmeg, cardamom, black pepper, fenugreek, cumin, red chilies
-              (Kashmiri, Teja, Bhut Jolokia), turmeric, mustard, and coriander
-              seeds.
-            </li>
-
-            <li>
-              <strong>Pulses: </strong>
-              Arhar dal, urad dal, moong dal, masoor dal, and chana dal,
-              sourced from trusted farmers.
-            </li>
-
-            <li>
-              <strong>Rice Varieties: </strong>
-              Basmati (1121, Sugandha) and non-basmati (Sona Masoori,
-              Sharbati).
-            </li>
-
-            <li>
-              <strong>Dry Fruits & Oils: </strong>
-              Cashew nuts (A-grade, roasted, raw) and wood-pressed oils
-              (coconut, castor, groundnut, sesame).
-            </li>
-
-            <li>
-              <strong>Sugar:</strong>
-              Raw brown sugar and white sugar, tested to meet high-quality
-              standards.
-            </li>
-          </ul>
         </div>
       </div>
 
-      <div id={styles.mission}>
-        <h2>OUR MISSION</h2>
-        <p>
-          At ARASCO EXPORT INDIA, our mission is to provide top-quality food
-          products that meet the diverse needs of our customers worldwide. We
-          are committed to ensuring customer satisfaction through our dedication
-          to sourcing the finest spices, pulses, rice, dry fruits, oils, and
-          sugars while maintaining rigorous quality standards.
-        </p>
+      {/* 🎯 Vision & Mission Section */}
+      <div className={styles.missionVisionContainer}>
+        <div className={styles.card}>
+          <h2>OUR MISSION</h2>
+          <p>
+            At ARASCO EXPORT INDIA, our mission is to provide top-quality food
+            products that meet the diverse needs of our customers worldwide...
+          </p>
+        </div>
+
+        <div className={styles.card}>
+          <h2>OUR VISION</h2>
+          <p>
+            Our vision is to be a globally recognized leader in the food export
+            industry, known for reliability, excellence, and innovation...
+          </p>
+        </div>
       </div>
 
-      <div id={styles.vision}>
-        <h2>OUR VISION</h2>
-        <p>
-          Our vision is to be a globally recognized leader in the food export
-          industry, known for reliability, excellence, and innovation. We aim to
-          expand our reach, enhance customer relationships, and continually
-          provide superior products that promote health and well-being across
-          the world.
-        </p>
+      {/* 🛍️ Product Categories Section */}
+      <div className={styles.productsSection}>
+        <h2>🌟 OUR PREMIUM COLLECTION 🌟</h2>
+        <div className={styles.productsGrid}>
+          {/* Spices Category */}
+          <div className={styles.productCard}>
+            <h3>🌶️ Whole Spices</h3>
+            <p>
+              Explore our high-quality spices including nutmeg seeds, green cardamom, black pepper, fenugreek, cumin, and various red chilies like Kashmiri, Teja, Sankeshwari, and Bhut Jolokia.
+            </p>
+          </div>
+
+          {/* Pulses Category */}
+          <div className={styles.productCard}>
+            <h3>🍲 Premium Pulses</h3>
+            <p>
+              We provide arhar dal, urad dal, moong dal, masoor dal, and chana dalx, all sourced from trusted farmers and processed with top standards.
+            </p>
+          </div>
+
+          {/* Rice Category */}
+          <div className={styles.productCard}>
+            <h3>🍚 Basmati & Non-Basmati Rice</h3>
+            <p>
+              A rich selection of rice including 1121 Basmati Rice, Sugandha, Sona Masoori, and Sharbati for all culinary needs.
+            </p>
+          </div>
+
+          {/* Dry Fruits Category */}
+          <div className={styles.productCard}>
+            <h3>🥜 Finest Dry Fruits</h3>
+            <p>
+              Indulge in A-grade cashew nuts, split cashews, roasted & raw cashews, packed with nutrition and taste.
+            </p>
+          </div>
+
+          {/* Edible Oils Category */}
+          <div className={styles.productCard}>
+            <h3>🛢️ Pure Edible Oils</h3>
+            <p>
+              Discover wood-pressed oils including coconut, castor, groundnut, and sesame oil, ensuring purity and health benefits.
+            </p>
+          </div>
+
+          {/* Sugar Category */}
+          <div className={styles.productCard}>
+            <h3>🍬 High-Quality Sugar</h3>
+            <p>
+              Offering raw brown sugar and white sugar, sourced from the best refineries.
+            </p>
+          </div>
+        </div>
       </div>
 
+      {/* 👥 Meet the Team Section */}
       <div id={styles.team}>
         <h2>MEET OUR TEAM</h2>
         <div className={styles.teamGrid}>
           <div className={styles.teamMember}>
-            <img src="" alt="" />
             <h4>Abdul Rashid Siddique</h4>
             <span>Director</span>
           </div>
           <div className={styles.teamMember}>
-            <img src="" alt="" />
             <h4>Nasreen Bano Siddique</h4>
             <span>Director</span>
           </div>
@@ -96,4 +113,7 @@ const About = () => {
 };
 
 export default About;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8102ad7594bf8f5116153f8ba0afd674e32872c4

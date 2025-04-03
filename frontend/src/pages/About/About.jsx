@@ -12,11 +12,10 @@ const About = () => {
         <img src={exportglobe} alt="India Globe" loading="lazy" />
         <div id={styles.intro}>
           <h1>ARASCO EXPORT INDIA</h1>
-          <p>
-            ARASCO EXPORT INDIA PRIVATE LIMITED, based in New Delhi, India, has
-            been a trusted supplier, exporter, and trader of premium food
+          <p><b>
+            ARASCO EXPORT INDIA PRIVATE LIMITED, based in New Delhi, India, has been a trusted supplier, exporter, and trader of premium food
             products since 2023. With a strong focus on whole spices, pulses, rice varieties, cashew nuts, edible oils, and sugar, the company has established a solid reputation for quality and customer satisfaction.
-
+            </b>
           </p>
         </div>
       </div>

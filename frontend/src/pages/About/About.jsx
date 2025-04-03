@@ -2,6 +2,9 @@ import Pageshead from "../../components/Pageshead/Pageshead";
 import styles from "./about.module.css";
 import exportglobe from "../../assets/export.png";
 
+import abdulImage from "../../assets/";
+import nasreenImage from "../assets/nasreen bano siddique.png";
+
 const About = () => {
   return (
     <div id="about">
@@ -97,11 +100,16 @@ const About = () => {
       <div id={styles.team}>
         <h2>MEET OUR TEAM</h2>
         <div className={styles.teamGrid}>
+          {/* Abdul Rashid Siddique */}
           <div className={styles.teamMember}>
+            <img src={abdulImage} alt="Abdul Rashid Siddique" loading="lazy" />
             <h4>Abdul Rashid Siddique</h4>
             <span>Director</span>
           </div>
+
+          {/* Nasreen Bano Siddique */}
           <div className={styles.teamMember}>
+            <img src={nasreenImage} alt="Nasreen Bano Siddique" loading="lazy" />
             <h4>Nasreen Bano Siddique</h4>
             <span>Director</span>
           </div>

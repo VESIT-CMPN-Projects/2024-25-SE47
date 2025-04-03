@@ -1,10 +1,9 @@
-/* 🌍 Globe Section */
 #globe {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 50px;
-  background: linear-gradient(to right, #ffecd2, #3737ed);
+  background: linear-gradient(to right, #ffecd2, #6666fc);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
@@ -20,6 +19,13 @@
   width: 50%;
   text-align: center;
 }
+
+
+#globe div p {
+    color: #000000;
+    font-size: 18px;
+}
+
 
 /* 🎯 Vision & Mission */
 .missionVisionContainer {
@@ -44,7 +50,7 @@
 .productsSection {
   text-align: center;
   padding: 60px 20px;
-  background: #595cfd;
+  background: #cdcee0;
 }
 
 .productsGrid {

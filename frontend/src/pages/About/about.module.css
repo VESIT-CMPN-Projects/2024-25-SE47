@@ -1,15 +1,13 @@
-/* About Page Styles */
-
 /* 🌍 Globe Section */
 #globe {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 50px;
-  background-color: #f7f7f7;
+  background: linear-gradient(to right, #ffecd2, #3737ed);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -18,37 +16,56 @@
   border-radius: 50%;
 }
 
-#globe div h1 {
-  color: #333;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
 #intro {
   width: 50%;
   text-align: center;
-  font-family: var(--secondary-font);
-  font-weight: 600;
 }
 
-/* 🎯 Mission & Vision */
+/* 🎯 Vision & Mission */
 .missionVisionContainer {
   display: flex;
   justify-content: center;
   gap: 30px;
   padding: 40px 20px;
-  flex-wrap: wrap; /* Allows items to stack on smaller screens */
+  flex-wrap: wrap;
 }
 
 .card {
-  background: white;
+  background: #7380f2;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 40%;
-  min-width: 280px; /* Ensures it doesn’t shrink too much */
+  min-width: 280px;
   text-align: center;
+}
+
+/* 🛍️ Product Section */
+.productsSection {
+  text-align: center;
+  padding: 60px 20px;
+  background: #595cfd;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.productCard {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* 👥 Team Section */
@@ -61,11 +78,11 @@
   display: flex;
   justify-content: center;
   gap: 40px;
-  flex-wrap: wrap; /* Stack team members on smaller screens */
+  flex-wrap: wrap;
 }
 
 .teamMember {
-  background: white;
+  background: rgb(194, 194, 235);
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -73,59 +90,22 @@
   min-width: 250px;
 }
 
-/* 📱 Mobile & Tablet Responsive */
-@media screen and (max-width: 1024px) {
+/* 📱 Mobile Responsive */
+@media screen and (max-width: 768px) {
   #globe {
-      flex-direction: column; /* Stack elements vertically */
+      flex-direction: column;
       text-align: center;
   }
 
   #globe img {
-      width: 70%; /* Increase size for better visibility */
+      width: 70%;
   }
 
   #intro {
       width: 80%;
   }
 
-  .card {
-      width: 80%; /* Make cards take full width on smaller screens */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #globe img {
-      width: 80%;
-  }
-
-  #globe div h1 {
-      font-size: 2rem;
-  }
-
-  .teamGrid {
-      flex-direction: column;
-      gap: 20px;
-  }
-
-  .teamMember {
-      width: 90%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #globe img {
-      width: 90%;
-  }
-
-  #globe div h1 {
-      font-size: 1.8rem;
-  }
-
-  .missionVisionContainer {
-      flex-direction: column;
-  }
-
-  .card {
-      width: 95%;
+  .productsGrid {
+      grid-template-columns: 1fr;
   }
 }

@@ -2,8 +2,8 @@ import Pageshead from "../../components/Pageshead/Pageshead";
 import styles from "./about.module.css";
 import exportglobe from "../../assets/export.png";
 
-import abdulImage from "../../assets/";
-import nasreenImage from "../assets/nasreen bano siddique.png";
+import abdulImage from "../../assets/abdulRahid.png";
+import nasreenImage from "../../assets/nasreenBano.png";
 
 const About = () => {
   return (

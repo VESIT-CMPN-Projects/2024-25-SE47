@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+
+=======
 /* 🌍 Globe Section */
+>>>>>>> 8102ad7594bf8f5116153f8ba0afd674e32872c4
 #globe {
   display: flex;
   justify-content: space-around;
@@ -21,6 +25,13 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
+#globe div p {
+    color: #666;
+    font-size: 18px;
+}
+
+=======
 /* 🎯 Vision & Mission */
 .missionVisionContainer {
   display: flex;
@@ -109,3 +120,4 @@
       grid-template-columns: 1fr;
   }
 }
+>>>>>>> 8102ad7594bf8f5116153f8ba0afd674e32872c4

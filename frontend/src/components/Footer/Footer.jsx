@@ -28,6 +28,9 @@ const Footer = () => {
           <Link to={"/contacts"}>
             <li>Contact Us</li>
           </Link>
+          <Link to={"/contacts"}>
+            <li>Join Now</li>
+          </Link>
           </ul>
         </div>
         <div>

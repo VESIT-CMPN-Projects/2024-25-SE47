@@ -73,7 +73,7 @@ const Contact = () => {
   }
   
   return (
-    <div>
+    <div id="Contact">
       <Pageshead text={"Contact Us"} />
       <form onSubmit={handleSubmit} method="post">
         <div

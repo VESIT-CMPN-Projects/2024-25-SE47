@@ -12,10 +12,15 @@ import Ecommerce from "./Ecommerce/Ecommerce";
 import ProductDetail from "./pages/ProductDetail/ProductDetail"; 
 import OrdersPage from './pages/Orders/OrdersPage';
 import CartPage from "./pages/ShoppingCart/CartPage";
+import Signup from "./pages/Signup/Signup"
+import Login from "./pages/Login/Login"
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Landing/>}/>
+      <Route path="/signup" element={<Signup/>}/>
+      <Route path="/login" element={<Login/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/products" element={<Products/>}/>
       <Route path="/products/:product" element={<Product/>}/>

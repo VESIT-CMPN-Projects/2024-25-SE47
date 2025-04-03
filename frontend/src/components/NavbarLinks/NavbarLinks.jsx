@@ -80,6 +80,9 @@ const NavbarLinks = ({ burger, setActive, active }) => {
       <Link to={"/contacts"} onClick={onClickBurgerMenu}>
         <button>Contact Us</button>
       </Link>
+      <Link to={"/signup"} onClick={onClickBurgerMenu}>
+        <button>Join Now</button>
+      </Link>
     </ul>
   );
 };

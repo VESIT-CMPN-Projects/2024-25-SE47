@@ -18,12 +18,11 @@
 #intro {
   width: 50%;
   text-align: center;
-  color:black;
 }
 
 
 #globe div p {
-    color: #666;
+    color: #000000;
     font-size: 18px;
 }
 
